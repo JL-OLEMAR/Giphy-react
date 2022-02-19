@@ -1,0 +1,37 @@
+{
+  "name": "giphy-app",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "standard --fix ."
+  },
+  "dependencies": {
+    "@emotion/core": "10.0.28",
+    "@emotion/styled": "10.0.27",
+    "emotion-theming": "10.0.27",
+    "formik": "2.2.9",
+    "intersection-observer": "0.12.0",
+    "just-debounce-it": "1.1.0",
+    "react-dom": "17.0.2",
+    "react-helmet": "6.1.0",
+    "react-hook-form": "7.27.0",
+    "react": "17.0.2",
+    "wouter": "2.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "1.0.7",
+    "standard": "16.0.4",
+    "stylelint-config-standard": "25.0.0",
+    "stylelint": "14.5.1",
+    "vite": "2.8.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json",
+      "react-app"
+    ]
+  }
+}

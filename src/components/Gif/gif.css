@@ -1,0 +1,143 @@
+.gif {
+  position: relative;
+  margin-bottom: 0.5em;
+
+  --gifShadow-size: var(--gridList-gap, 6px);
+}
+
+.gif-buttons {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 1;
+}
+
+.gif-link {
+  color: #000;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+}
+
+.gif h4 {
+  background: rgb(0 0 0 / 30%);
+  bottom: 0;
+  color: #fff;
+  font-size: 12px;
+  margin: 0;
+  position: absolute;
+}
+
+.gif img {
+  object-fit: contain;
+  vertical-align: top;
+  width: 100%;
+}
+
+i {
+  font-size: 80px;
+}
+
+.gif a {
+  margin-bottom: 0;
+}
+
+.gif,
+.gif-link {
+  height: 100%;
+}
+
+.gif-link img {
+  height: inherit;
+  object-fit: cover;
+}
+
+.gif:nth-child(5n + 1) img {
+  background-color: var(--brand-color_1);
+}
+
+.gif:nth-child(5n + 2) img {
+  background-color: var(--brand-color_2);
+}
+
+.gif:nth-child(5n + 3) img {
+  background-color: var(--brand-color_3);
+}
+
+.gif:nth-child(5n + 4) img {
+  background-color: var(--brand-color_4);
+}
+
+.gif:nth-child(5n + 5) img {
+  background-color: var(--brand-color_5);
+}
+
+.gif:hover:nth-child(5n + 1) a {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_1);
+}
+
+.gif:hover:nth-child(5n + 2) a {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_2);
+}
+
+.gif:hover:nth-child(5n + 3) a {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_3);
+}
+
+.gif:hover:nth-child(5n + 4) a {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_4);
+}
+
+.gif:hover:nth-child(5n + 5) a {
+  box-shadow: 0 0 0 var(--gifShadow-size) var(--brand-color_5);
+}
+
+.gif:hover:nth-child(5n + 1) h4 {
+  background-color: var(--brand-color_1);
+  color: var(--theme-body-bg);
+}
+
+.gif:hover:nth-child(5n + 2) h4 {
+  background-color: var(--brand-color_2);
+  color: var(--theme-body-bg);
+}
+
+.gif:hover:nth-child(5n + 3) h4 {
+  background-color: var(--brand-color_3);
+  color: white;
+}
+
+.gif:hover:nth-child(5n + 4) h4 {
+  background-color: var(--brand-color_4);
+  color: white;
+}
+
+.gif:hover:nth-child(5n + 5) h4 {
+  background-color: var(--brand-color_5);
+  color: var(--theme-body-bg);
+}
+
+.gif:nth-child a (11n + 1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gif:nth-child a (8n + 1) {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+.gif:nth-child a (10n + 3) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+@media screen and (max-width: 45rem) {
+  .gif: nth-child(11n + 1),
+  .gif: nth-child(8n + 1),
+  .gif: nth-child(10n + 3) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}

@@ -1,0 +1,68 @@
+:root {
+  --brand-color_1: #0f9;
+  --brand-color_2: #0cf;
+  --brand-color_3: #93f;
+  --brand-color_4: tomato;
+  --brand-color_5: #fff35c;
+  --brand-color_6: #8429de;
+  --fz: 16px;
+  --search-size-mx-h: 3rem;
+  --theme--contrast-0: #121212;
+  --theme-body-bg: #18061f;
+  --theme-body-txt: #f3f3f3;
+  --zIndex-component: 5;
+  --zIndex-header: 20;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--theme-body-bg);
+  color: var(--theme-body-txt);
+  font-family:
+    Manrope,
+    sans-serif;
+  font-size: var(--fz);
+  margin: 0;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Courier New",
+    monospace;
+}
+
+a {
+  color: #09f;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.o-header {
+  background-color: inherit;
+  position: sticky;
+  top: 0;
+  z-index: var(--zIndex-header);
+  max-height: var(--search-size-mx-h);
+}
