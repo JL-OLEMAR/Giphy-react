@@ -1,4 +1,4 @@
-import { CategoryLink, CategoryList, CategoryListItem, CategoryTitle } from './styles'
+import { CategoryLink, CategoryList, CategoryListItem, CategoryTitle } from './styles.jsx'
 
 export function Category ({ name, options = [] }) {
   return (

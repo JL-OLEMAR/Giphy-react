@@ -1,12 +1,12 @@
 :root {
   --gridList-column: 250px;
-  --gridList-rows: 250px;
   --gridList-gap: 6px;
+  --gridList-rows: 250px;
 }
 
 .list-of-gifs {
-  display: grid;
   align-items: center;
+  display: grid;
   gap: var(--gridList-gap, 6px);
   grid-auto-flow: row dense;
   grid-auto-rows: var(--gridList-rows);

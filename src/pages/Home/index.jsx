@@ -10,7 +10,7 @@ export default function Home () {
   return (
     <>
       <Helmet>
-        <title>Home | Giphy</title>
+        <title>Home | Giffy</title>
       </Helmet>
 
       <header className='o-header'>

@@ -12,24 +12,27 @@ export function SearchForm ({
   const [, pushLocation] = useLocation()
   const { keyword, rating, changeKeyword, changeRating } = useForm({ initialKeyword, initialRating })
 
+  // Change input value
+  const handleChange = (evt) => {
+    changeKeyword({ keyword: evt.target.value })
+  }
+
+  // Change select value
+  const handleChangeRating = (evt) => {
+    changeRating({ rating: evt.target.value })
+  }
+
+  // Action on submit
   const onSubmit = ({ keyword }) => {
     // navegar a otra ruta
     (keyword !== '') && pushLocation(`/search/${keyword}/${rating}`)
   }
 
-  const handleChange = (evt) => {
-    changeKeyword({ keyword: evt.target.value })
-  }
-
+  // Submit form
   const handleSubmit = (evt) => {
     evt.preventDefault()
     onSubmit({ keyword })
   }
-
-  const handleChangeRating = (evt) => {
-    changeRating({ rating: evt.target.value })
-  }
-
   return (
     <>
       <form onSubmit={handleSubmit} className={css['c-search']}>

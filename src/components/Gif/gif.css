@@ -1,7 +1,6 @@
 .gif {
   position: relative;
   margin-bottom: 0.5em;
-
   --gifShadow-size: var(--gridList-gap, 6px);
 }
 

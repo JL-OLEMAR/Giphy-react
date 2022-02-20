@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getSingleGif } from '../services/getSingleGif'
-import { useGifs } from './useGifs'
+import { useGifs } from './useGifs.jsx'
 
 export function useSingleGif ({ id }) {
   const { gifs } = useGifs()

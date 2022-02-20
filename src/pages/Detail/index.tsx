@@ -8,7 +8,6 @@ import { Spinner } from '../../components/Spinner'
 export function Detail ({ params }) {
   const { gif, isLoading, isError } = useSingleGif({ id: params.id })
   const { id, url, title } = gif
-  const titleHelmet = title ?? 'Giphy'
 
   isLoading && <Spinner />
   isError && <Redirect to='/404' />
@@ -17,7 +16,7 @@ export function Detail ({ params }) {
   return (
     <>
       <Helmet>
-        <title>{titleHelmet} || Giffy</title>
+        <title>{title ?? 'Gif'} || Giffy</title>
       </Helmet>
 
       <h3 className='app-title'>{title}</h3>
