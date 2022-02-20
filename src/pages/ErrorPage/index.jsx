@@ -1,12 +1,12 @@
 import { Helmet } from 'react-helmet'
-import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 
 import { SearchForm } from '../../components/SearchForm'
 import { ButtonComponent } from '../../components/Button'
 
 const gifsErrors = ['d2jjuAZzDSVLZ5kI', 'Bp3dFfoqpCKFyXuSzP', 'hv5AEBpH3ZyNoRnABG', 'hLwSzlKN8Fi6I']
 
-const pageErrorStyles = css`
+const PageErrorStyles = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -15,25 +15,23 @@ const pageErrorStyles = css`
   text-align: center;
 `
 
-const codeErrorStyles = css`
+const CodeErrorStyles = styled.span`
   font-size: 5rem;
   font-style: italic;
   font-weight: bold;
 `
 
-const msgErrorStyles = css`
+const MsgErrorStyles = styled.span`
   font-size: 1.5rem;
   margin: 1rem auto;
 `
 
-const SIZE = '350px'
-
-const gifErrorStyles = css({
-  height: SIZE,
-  margin: '1rem auto',
-  objectFit: 'cover',
-  width: SIZE
-})
+const GifErrorStyles = styled.img`
+  height: 350px;
+  margin: 1rem auto;
+  object-fit: cover;
+  width: 350px;
+`
 
 export function ErrorPage () {
   const randomImage = () => {
@@ -51,12 +49,12 @@ export function ErrorPage () {
       </header>
 
       <div className='app-wrapper'>
-        <div css={pageErrorStyles}>
-          <span css={codeErrorStyles}>404</span>
-          <span css={msgErrorStyles}>Sometimes gettings lost isn't that bad</span>
-          <img css={gifErrorStyles} src={randomImage} alt='alt-page-404' />
+        <PageErrorStyles>
+          <CodeErrorStyles>404</CodeErrorStyles>
+          <MsgErrorStyles>Sometimes gettings lost isn't that bad</MsgErrorStyles>
+          <GifErrorStyles src={randomImage()} alt='alt-page-404' />
           <ButtonComponent href='/'>Go back home</ButtonComponent>
-        </div>
+        </PageErrorStyles>
       </div>
     </>
   )

@@ -23,14 +23,14 @@ export const Link = styled(LinkWouter)`
   color: ${({ theme }) => theme.colors.textColor};
   cursor: pointer;
   font-size: ${getFrontSize};
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
 
   :hover {
     background-color: var(--brand-color_2);
   }
 
   [disabled] {
-    opacity: 0.3;
+    opacity: .3;
     pointer-events: none;
   }
 `

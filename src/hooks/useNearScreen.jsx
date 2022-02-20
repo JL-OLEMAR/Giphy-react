@@ -19,7 +19,7 @@ export function useNearScreen ({ distance = '100px', externalRef, once = true } 
     }
 
     Promise.resolve(
-      (typeof window.IntersectionObserver === 'function')
+      (typeof window.IntersectionObserver !== 'undefined')
         ? window.IntersectionObserver
         : import('intersection-observer')
     ).then(() => {

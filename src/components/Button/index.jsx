@@ -1,4 +1,4 @@
-import { Button, Link } from './styles'
+import { Button, Link } from './styles.jsx'
 
 export function ButtonComponent ({ children, href, size = 'small' }) {
   return href
