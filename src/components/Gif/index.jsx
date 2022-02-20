@@ -1,7 +1,7 @@
 import { Link } from 'wouter'
 import './gif.css'
 
-export function Gif ({ title, id, url }) {
+export function Gif ({ id, url, title }) {
   return (
     <div className='gif'>
       <Link to={`/gif/${id}`} className='gif-link'>

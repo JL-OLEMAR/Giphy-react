@@ -2,13 +2,12 @@ import React, { Suspense } from 'react'
 import { Link, Route, Switch } from 'wouter'
 
 import { GifsContextProvider } from './context/GifsContext'
-import { Detail } from './pages/Detail'
 import { SearchResults } from './pages/SearchResults'
+import { Detail } from './pages/Detail'
 import { ErrorPage } from './pages/ErrorPage'
 import './App.css'
 
-import { Home as HomePage } from './pages/Home'
-// const HomePage = React.lazy(() => import('./pages/Home'))
+const Home = React.lazy(() => import('./pages/Home'))
 
 export function App () {
   return (
@@ -23,7 +22,7 @@ export function App () {
 
           <GifsContextProvider>
             <Switch>
-              <Route component={HomePage} path='/' />
+              <Route component={Home} path='/' />
               <Route
                 component={SearchResults}
                 path='/search/:keyword/:rating?'

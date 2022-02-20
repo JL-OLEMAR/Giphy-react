@@ -7,17 +7,20 @@ import { Spinner } from '../../components/Spinner'
 
 export function Detail ({ params }) {
   const { gif, isLoading, isError } = useSingleGif({ id: params.id })
+  console.log({ gif })
+  console.log({ params })
   const title = gif ? gif.title : ''
 
-  isLoading && (
-    <>
-      {/* <Helmet>
-        <title>Loading...</title>
-      </Helmet> */}
-      <Spinner />
-    </>
-  )
-
+  if (isLoading) {
+    return (
+      <>
+        <Helmet>
+          <title>Cargando...</title>
+        </Helmet>
+        <Spinner />
+      </>
+    )
+  }
   isError && <Redirect to='/404' />
   if (!gif) return null
 
@@ -26,8 +29,9 @@ export function Detail ({ params }) {
       <Helmet>
         <title>{title} || Giphy</title>
       </Helmet>
+
       <h3 className='app-title'>{gif.title}</h3>
-      <Gif {...gif} />
+      <Gif id={gif.id} url={gif.url} title={gif.title} />
     </>
   )
 }

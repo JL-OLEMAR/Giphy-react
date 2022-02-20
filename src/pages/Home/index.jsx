@@ -4,7 +4,7 @@ import { ListOfGifs } from '../../components/ListOfGifs'
 import { SearchForm } from '../../components/SearchForm'
 import TrendingSearches from '../../components/TrendingSearches'
 
-export function Home () {
+export default function Home () {
   const { gifs } = useGifs()
 
   return (
