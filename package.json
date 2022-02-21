@@ -2,11 +2,21 @@
   "name": "giffy-app",
   "private": true,
   "version": "0.0.2",
+  "author": "José Olemar",
+  "description": "A simple app to search your gifs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "standard --fix ."
+  },
+  "homepage": "https://github.com/JL-OLEMAR/Giphy-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JL-OLEMAR/Giphy-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JL-OLEMAR/Giphy-react/issues"
   },
   "dependencies": {
     "@emotion/react": "11.8.1",
@@ -27,6 +37,9 @@
     "extends": [
       "./node_modules/standard/eslintrc.json",
       "react-app"
+    ],
+    "ignorePatterns": [
+      "node_modules/"
     ]
   }
 }
